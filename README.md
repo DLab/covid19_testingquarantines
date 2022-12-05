@@ -5,4 +5,4 @@ This repository contains the mutliparadigm simulations that produced the results
 The ODE simulations where performed using the [cv19gm library](https://github.com/DLab/covid19geomodeller)
 
 ## Agent Based Models
-The agents based simulations where performed using the [Net-Logo library](https://ccl.northwestern.edu/netlogo/)
+The agents based simulations where performed using the [Net-Logo library](https://ccl.northwestern.edu/netlogo/), version 6.1.1.
