@@ -249,7 +249,7 @@ total-agents
 total-agents
 10
 max-agents
-10000.0
+0.0
 1
 1
 NIL
@@ -379,7 +379,7 @@ testing-length
 testing-length
 1
 30
-7.0
+30.0
 1
 1
 NIL
@@ -574,39 +574,29 @@ sum [secondary-cases-live] of turtles with [not susceptible? and not exposed?]
 @#$#@#$#@
 ## WHAT IS IT?
 
-Code to reproduce a SEIRTQ model
+The SEIRTQ agent-based simulation model tests different testing strategies for a population. The model considers factors such as the percentage of people tested, the length of the testing cycle, the efficacy of the tests, the percentage of people who adopt quarantine measures, and the time it takes for people to adopt quarantine measures.
+
+The model simulates the spread of an infectious disease through a population and assesses the effectiveness of different testing strategies in controlling the spread of the disease. The model uses agents to represent individuals in the population, and each agent has a set of attributes that determine how it will behave in response to the disease.
+
+Overall, the SEIRTQ agent-based simulation model is a useful tool for analyzing the effectiveness of different testing strategies in controlling the spread of infectious diseases. It allows users to experiment with different scenarios and assess the potential impact of different testing strategies on the spread of the disease.
 
 ## HOW IT WORKS
 
-(what rules the agents use to create the overall behavior of the model)
+The agents in the simulation move one patch per time-step and are able to infect any other agents in the same patch. At the same time, all agents are susceptible to be tested, regarding the set rules. The testing strategy is periodic, with a cycle that lasts from one to thirty days. At the end of each cycle, all agents can be tested again. Once an agent has been tested within a cycle, they cannot be tested again until the next cycle begins.
 
 ## HOW TO USE IT
 
-(how to use the model, including a description of each of the items in the Interface tab)
-
-## THINGS TO NOTICE
-
-(suggested things for the user to notice while running the model)
-
-## THINGS TO TRY
-
-(suggested things for the user to try to do (move sliders, switches, etc.) with the model)
-
-## EXTENDING THE MODEL
-
-(suggested things to add or change in the Code tab to make the model more complicated, detailed, accurate, etc.)
-
-## NETLOGO FEATURES
-
-(interesting or unusual features of NetLogo that the model uses, particularly in the Code tab; or where workarounds were needed for missing features)
-
-## RELATED MODELS
-
-(models in the NetLogo Models Library and elsewhere which are of related interest)
+- init-infected: number of initial infected agents.
+- total-agents: number of total initial agents.
+- %test_app: percentage of people tested in one time-step.
+- testing-length: length of a strategy cycle.
+- test-efficacy: percentage of tests that are applied that detect an infected agent.
+- qua-adoption: percentage of tested infected agent that adopt the quarantine.
+- qua-adoption-time: days that elapse until tested infected agent adopt quarantine.
 
 ## CREDITS AND REFERENCES
 
-(a reference to the model's URL on the web if it has one, as well as any other necessary credits, citations, and links)
+If you use this ABMs, please cite: COVID-19 SUPPRESSION USING A TESTING/QUARANTINE STRATEGY: A multi-paradigm simulation approach based on a SEIRTQ compartmental model, Ropert, Bernardin, Perez-Acle 2022, WSC.
 @#$#@#$#@
 default
 true
